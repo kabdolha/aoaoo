@@ -1,0 +1,36 @@
+NEURAL NETWORK COLORED SEGMENTS ANALYSIS
+==================================================
+
+NEURON ACTIVATION POINTS
+-------------------------
+Neuron 4:
+  Formula: h4 = ReLU(0.6817 * x_scaled + 0.2601)
+  Activates when temperature > 62.9°F
+  Effect: INCREASES ice cream consumption
+
+Neuron 2:
+  Formula: h2 = ReLU(1.4894 * x_scaled + -0.5163)
+  Activates when temperature > 80.7°F
+  Effect: INCREASES ice cream consumption
+
+COLORED SEGMENTS ON GRAPH
+-------------------------
+Segment 1 (Orange): 25.0°F to 62.9°F
+  Active neurons: None (baseline only)
+  Slope: 0.00 ice creams per °F
+
+Segment 2 (Yellow-Orange): 62.9°F to 80.7°F
+  Active neurons: 4
+  Slope: 0.23 ice creams per °F
+
+Segment 3 (Yellow): 80.7°F to 115.0°F
+  Active neurons: 4, 2
+  Slope: 1.23 ice creams per °F
+
+HOW TO READ THE COLORED LINE
+------------------------------
+Each color represents a different mathematical 'regime':
+- When temperature crosses an activation point, a new neuron 'turns on'
+- This changes the slope of the line (piecewise linear function)
+- More active neurons = steeper slope = faster ice cream growth
+- The neural network creates 'smart breakpoints' in the data
